@@ -1,0 +1,1 @@
+https://github.com/ravndal/hacs_flexit_bacnet.git
