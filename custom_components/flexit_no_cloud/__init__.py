@@ -1,7 +1,7 @@
 """The Flexit Nordic (BACnet) integration."""
 import asyncio.exceptions
 
-from flexit_bacnet.bacnet import FlexitBACnet
+from flexit_bacnet import FlexitBACnet
 from flexit_bacnet.bacnet import DecodingError
 
 from homeassistant.components.climate import (
@@ -18,7 +18,11 @@ from homeassistant.helpers import entity, service
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.typing import HomeAssistantType
 
+from homeassistant.helpers import config_validation as cv
+
 from .const import DOMAIN
+
+CONFIG_SCHEMA = cv.config_entry_only_config_schema
 
 PLATFORMS = ["climate", "switch"]
 
