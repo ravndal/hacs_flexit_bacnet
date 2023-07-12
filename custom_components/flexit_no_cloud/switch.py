@@ -1,7 +1,7 @@
 """The Flexit Nordic (BACnet) integration."""
 import asyncio.exceptions
 
-from flexit_no_cloud import FlexitBACnet
+from flexit_bacnet import FlexitBACnet
 from flexit_bacnet.bacnet import DecodingError
 
 from homeassistant.components.switch import SwitchEntity
