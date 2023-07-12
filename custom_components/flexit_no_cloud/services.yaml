@@ -1,0 +1,26 @@
+start_rapid_ventilation:
+  description: Starts rapid ventilation for a specified duration.
+  fields:
+    entity_id:
+      description: ID of the entity to start rapid ventilation on.
+      example: "climate.flexit"
+    duration:
+      description: Duration to run rapid ventilation.
+      example: 30
+
+start_fireplace_ventilation:
+  description: Starts fireplace ventilation for a specified duration.
+  fields:
+    entity_id:
+      description: ID of the entity to start fireplace ventilation on.
+      example: "climate.flexit"
+    duration:
+      description: Duration to run fireplace ventilation.
+      example: 30
+
+reset_air_filter_timer:
+  description: Resets the air filter timer of a specific entity.
+  fields:
+    entity_id:
+      description: ID of the entity to reset the air filter timer on.
+      example: "climate.flexit"
