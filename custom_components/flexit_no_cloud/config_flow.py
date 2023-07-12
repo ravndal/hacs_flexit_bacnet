@@ -5,7 +5,7 @@ import asyncio.exceptions
 import logging
 from typing import Any
 
-from flexit_bacnet import FlexitBACnet
+from flexit_no_cloud import FlexitBACnet
 from flexit_bacnet.bacnet import DecodingError
 import voluptuous as vol
 

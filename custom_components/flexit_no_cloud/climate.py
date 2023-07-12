@@ -2,7 +2,7 @@
 import asyncio.exceptions
 from typing import Any
 
-from flexit_bacnet import (
+from flexit_no_cloud import (
     VENTILATION_MODE_AWAY,
     VENTILATION_MODE_HOME,
     VENTILATION_MODE_STOP,
@@ -172,3 +172,20 @@ class FlexitClimateEntity(ClimateEntity):
             await self._device.disable_electric_heater()
         except (asyncio.exceptions.TimeoutError, ConnectionError, DecodingError) as exc:
             raise HomeAssistantError from exc
+
+    @property
+    def device_state_attributes(self):
+        """Return the optional state attributes."""
+        return {
+            "outside_air_temperature": self._device.outside_air_temperature,
+            "supply_air_temperature": self._device.supply_air_temperature,
+            "exhaust_air_temperature": self._device.exhaust_air_temperature,
+            "extract_air_temperature": self._device.extract_air_temperature,
+            "supply_air_fan_control_signal": self._device.supply_air_fan_control_signal,
+            "supply_air_fan_rpm": self._device.supply_air_fan_rpm,
+            "exhaust_air_fan_control_signal": self._device.exhaust_air_fan_control_signal,
+            "exhaust_air_fan_rpm": self._device.exhaust_air_fan_rpm,
+            "air_filter_operating_time": self._device.air_filter_operating_time,
+            "air_filter_exchange_interval": self._device.air_filter_exchange_interval,
+            "air_filter_polluted": self._device.air_filter_polluted,
+        }

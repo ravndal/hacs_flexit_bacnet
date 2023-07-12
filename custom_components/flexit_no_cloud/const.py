@@ -1,5 +1,5 @@
 """Constants for the Flexit Nordic (BACnet) integration."""
-from flexit_bacnet import (
+from flexit_no_cloud import (
     VENTILATION_MODE_AWAY,
     VENTILATION_MODE_HIGH,
     VENTILATION_MODE_HOME,
